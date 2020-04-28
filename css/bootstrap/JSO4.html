@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript last msg program</title>
+	<style type="text/css">
+	body{
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #88d5e9;
+		color: #333;
+	}
+	 .container{
+		text-align:
+    center;padding: 2rem;
+		border-radius: 7px;
+		background: #fff;
+		flex: 0 0 80%;
+	}
+	button{
+		display: block;
+		font-size: 2rem;
+		margin: 1rem auto;
+		padding: 0.5rem  1rem;
+		color:black;
+		background: #6cc3d8;
+		border: 20px;
+		border: none;
+	}
+	button:hover{
+		opacity: 0.5rem;
+		cursor: pointer;
+
+	}
+	input[type=text]{
+		padding: 0.5rem;
+		margin: 1rem;
+		border-radius: 1.5px;
+		font-size: 1.5rem;
+		border:3px solid #88d5e9;
+		outline: none;
+	}
+
+	</style>
+
+</head>
+ <body>
+   <div class="container">
+   <h2>A Message you would like to Pass</h2>
+	 <input type="text" name="messageIn" id="messageIn">
+	 <button type="button" id="sendBtn">Submit </button>
+	 <h1 id="messageOut">Last Message Delivered</h1>
+ </div>
+ <script>
+ 	const sendBtn = document.querySelector('#sendBtn');
+const messageIn = document.querySelector('#messageIn');
+const messageOut = document.querySelector('#messageOut');
+sendBtn.addEventListener('click',sendMsg)
+function sendMsg()
+{
+  let content = messageIn.value;
+  console.log(content);
+  messageOut.innerHTML=content;
+}
+ </script>
+</body>
+</html>
